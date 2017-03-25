@@ -767,10 +767,11 @@
 				.on("click.jstree", ".jstree-anchor", $.proxy(function (e) {
 						var a = e.currentTarget;
                         var dontPreventDefault;
-                        if ( a && $.nodeName(a, 'A') && a.protocol !== 'javascript:' && $(a).attr('href') !== '#' ) {
+                        if ( this.settings.core.click_nav && a && $.nodeName(a, 'A') && a.protocol !== 'javascript'+String.fromCharCode(58) && $(a).attr('href') !== '#' ) {
                             dontPreventDefault = true;
                         }
-                        dontPreventDefault || e.preventDefault();
+                        if(!dontPreventDefault) { e.preventDefault(); }
+
 						if(e.currentTarget !== document.activeElement) { $(e.currentTarget).focus(); }
 						this.activate_node(e.currentTarget, e);
 					}, this))
