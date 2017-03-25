@@ -768,7 +768,7 @@
 				.on("click.jstree", ".jstree-anchor", $.proxy(function (e) {
 						var a = e.currentTarget;
                         var dontPreventDefault;
-                        if ( this.settings.core.click_nav && a && $.nodeName(a, 'A') && a.protocol !== 'javascript'+String.fromCharCode(58) && $(a).attr('href') !== '#' ) {
+                        if ( this.settings.core.click_nav && !this.settings.core.multiple && a && $.nodeName(a, 'A') && a.protocol !== 'javascript'+String.fromCharCode(58) && $(a).attr('href') !== '#' ) {
                             dontPreventDefault = true;
                         }
                         if(!dontPreventDefault) { e.preventDefault(); }

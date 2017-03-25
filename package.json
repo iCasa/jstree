@@ -38,10 +38,10 @@
     "grunt-contrib-watch": "~1.1.0",
     "grunt-resemble-cli": "0.0.8",
     "grunt-text-replace": "~0.4.0",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.15"
   },
   "dependencies": {
-    "jquery": ">=1.9.1"
+    "jquery": "^3.5.1"
   },
   "npmName": "jstree",
   "npmFileMap": [
